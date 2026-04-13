@@ -22,7 +22,7 @@ Built using:
 
 ## Database Diagram
 
-![Database Diagram](public/db_image.png)
+![Database Diagram](public/DBML WORKOUT PROJECT.png)
 
 # Setup Instructions
 
