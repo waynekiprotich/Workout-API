@@ -1,17 +1,19 @@
 from flask import Flask, request, jsonify
 from flask_migrate import Migrate
-
 from models import db, Workout, Exercise, WorkoutExercise
 from schemas import WorkoutSchema, ExerciseSchema, WorkoutExerciseSchema
 
 app = Flask(__name__)
 
+# CONFIGURATION
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///app.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
+# INITIALIZATION
 db.init_app(app)
 migrate = Migrate(app, db)
 
+# SCHEMAS
 workout_schema = WorkoutSchema()
 workouts_schema = WorkoutSchema(many=True)
 exercise_schema = ExerciseSchema()
@@ -59,7 +61,6 @@ def delete_workout(id):
     db.session.commit()
 
     return jsonify({"message": "Workout deleted"})
-
 
 
 # EXERCISE ROUTES
