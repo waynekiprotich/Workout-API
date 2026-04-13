@@ -22,7 +22,7 @@ Built using:
 
 ## Database Diagram
 
-![Database Diagram](public/images/database-diagram.png)
+![Database Diagram](![Database Diagram](public/db_image.png))
 
 # Setup Instructions
 
